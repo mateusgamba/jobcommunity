@@ -1,0 +1,327 @@
+/* Variables */
+$colour-primary: #249fda;
+$colour-primary-hover: #1f87b9;
+$colour-secondary: #232323;
+$colour-light: #ededed;
+$colour-white: white;
+
+$background-colour-white: white;
+
+$break-small: 575px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1200px;
+
+/* General */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+.flex-safari {
+  display: -webkit-box !important;
+  -webkit-box-pack: center !important;
+  -webkit-box-align: center !important;
+}
+
+/* Navebar */
+.navbar {
+  margin-bottom: 0px;
+  z-index: 1000;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  .brand {
+    color: $colour-primary;
+    font-weight: 600;
+    font-size: 1.3rem;
+  }
+  .nav-item {
+    a {
+      display: block;
+      padding: 0.5rem 0;
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: $colour-secondary;
+      &:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+  .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.5) !important;
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    }
+  }
+}
+
+/* Header - landpage */
+.jumbotron-background {
+  position: relative;
+  background-image: url("../img/showcase.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-bottom: 0;
+  margin-top: -76px;
+  h2 {
+    @media (max-width: $break-small) {
+      font-size: 2.7rem;
+    }
+    @media (min-width: $break-small) {
+      font-size: 3.5rem;
+    }
+    @media (min-width: $break-medium) {
+      font-size: 4rem;
+    }
+    @media (min-width: $break-large) {
+      font-size: 4.5rem;
+    }
+    @media (min-width: $break-xlarge) {
+      font-size: 5rem;
+    }
+  }
+  .btn {
+    span {
+      font-size: 1.3rem;
+      margin-left: 8px;
+    }
+  }
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background: #1d1d1d;
+  a {
+    color: $colour-white;
+    font-weight: 300;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+    }
+  }
+}
+
+/* Div box center */
+.box-center {
+  padding: 16px;
+  .box-center-form {
+    padding: 25px;
+    background-color: $background-colour-white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: $break-small) {
+    width: 100%;
+  }
+  @media (min-width: $break-small + 1) {
+    width: 100%;
+  }
+  @media (min-width: $break-medium) {
+    margin: auto;
+    max-width: 400px;
+  }
+  @media (min-width: $break-large) {
+    margin: auto;
+    max-width: 400px;
+  }
+  @media (min-width: $break-xlarge) {
+    margin: auto;
+    max-width: 400px;
+  }
+}
+
+/* Profile user page */
+.jumbotron-profile {
+  position: relative;
+  background-image: url("../img/profileBackground.jpg");
+  background-size: cover;
+  background-position: top;
+  border-radius: 0;
+  color: $colour-white;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 127, 255, 0.2);
+    z-index: 1;
+  }
+  .text-inner {
+    position: relative;
+    z-index: 2;
+  }
+  h3 {
+    font-size: 2rem;
+    color: $colour-white !important;
+  }
+  .lead {
+    font-size: 1.15rem;
+  }
+}
+
+/* Buttons and links */
+.btn {
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: $colour-primary;
+  border-color: $colour-primary;
+  &:hover {
+    border-color: $colour-primary-hover;
+    background-color: $colour-primary-hover;
+  }
+}
+
+.btn-lg {
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: $colour-primary;
+  text-decoration: none;
+  &:hover {
+    color: $colour-primary-hover;
+    text-decoration: underline;
+  }
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 0;
+  font-size: 1.5rem;
+  font-weight: 100;
+  &::placeholder {
+    color: $colour-light;
+  }
+}
+
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1"><path d="M4 8L0 4h8z"/></svg>');
+}
+
+/* Alert */
+.alert {
+  border-radius: 0;
+}
+
+/* Card */
+.card {
+  border-radius: 0;
+  background-color: $background-colour-white;
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.2);
+  border: 0;
+  .card-body {
+    h3 {
+      text-transform: capitalize;
+    }
+    h4 {
+      font-size: 1.35rem;
+      margin-bottom: 4px !important;
+      a {
+        color: $colour-secondary;
+      }
+    }
+    h5 {
+      font-size: 1rem;
+    }
+    p {
+      font-weight: 100;
+    }
+    .left-1 {
+      padding-left: 2px;
+    }
+  }
+}
+
+/* Badge */
+.badge {
+  border-radius: 0;
+  line-height: normal;
+  font-weight: 100;
+  padding: 0.25em 0.7em;
+}
+.badge-light {
+  background-color: $colour-light;
+}
+
+/* Typography */
+h2.title {
+  font-weight: 300;
+  color: $colour-secondary;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.04), 0px 1px 1px rgba(0, 0, 0, 0.04),
+    2px 1px 1px rgba(0, 0, 0, 0.04), 1px 2px 1px rgba(0, 0, 0, 0.04),
+    3px 2px 1px rgba(0, 0, 0, 0.04), 2px 3px 1px rgba(0, 0, 0, 0.04),
+    4px 3px 1px rgba(0, 0, 0, 0.04), 3px 4px 1px rgba(0, 0, 0, 0.04),
+    5px 4px 1px rgba(0, 0, 0, 0.04);
+  margin-left: 4px;
+  @media (min-width: $break-small + 1) {
+    font-size: 2rem;
+  }
+  @media (min-width: $break-medium) {
+    font-size: 2.2rem;
+  }
+}
+
+h3 {
+  color: $colour-secondary !important;
+}
+
+.text-content {
+  p:first-child {
+    margin-top: 0;
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.row-shadow {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.text-mute {
+  font-weight: 100;
+}
+
+p.preview-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+form h5 {
+  font-weight: 600;
+  font-size: 1.2rem !important;
+}
+
+/* Table */
+table.table-border-top-none > thead > tr > th {
+  border-top: 0 !important;
+}
+
+table.table-vertical-align-middle > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.btn-link-primary {
+  color: $colour-primary;
+  &:hover {
+    color: $colour-primary-hover;
+  }
+}

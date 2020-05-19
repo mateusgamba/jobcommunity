@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+package-lock.json
+
+# temporary
+/tmp
+
+# misc
+.DS_Store

@@ -1,0 +1,30 @@
+version: "2"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: jobcommunity-web
+    command: npm run dev
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+      - /usr/app/client/node_modules
+    ports:
+      - "5000:5000"
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  db:
+    container_name: jobcommunity-db
+    image: mongo:3.6
+    ports:
+      - "27017:27017"
+    volumes:
+      - jobcommunity-volume:/data/db
+
+volumes:
+  jobcommunity-volume:
+    driver: local
