@@ -4,6 +4,13 @@ JOBCommunity is a platform that allows users to create professional profiles and
 
 Try out the [Demo](https://jobcommunity.herokuapp.com/).
 
+You can test using the following account:
+
+**Email**: leonbeckenbauer@teleworm.us
+
+**Password**: 123123
+
+
 ![](https://repository-images.githubusercontent.com/265103375/1e20f380-9954-11ea-9b94-7600c03c019a)
 
 It provides the following features:
@@ -211,20 +218,21 @@ In this part of publication the name for publication will be **myproject** inste
 
 ## Database
 
-You can create your own mongoDB cloud database free through the [mLab](https://mlab.com/) platform. Please, check out in mlab docs.
+You can create your own mongoDB cloud database free through the [mongoDB Atlas](https://account.mongodb.com/account/register) platform. Please, check out in [Atlas docs](https://docs.atlas.mongodb.com/getting-started/).
 
 In summary follow the instructions below:
 
-- Sign up to a new account on mLab;
-- Create a new database;
-- In options (collections, users, ...) in the tabs at new database, choose option users;
-- Create a new user with a difficult password;
-- Get URI mongo on mLab and change <dbuser> and <dbpassword> with your new created user.
-- Keep the URI in hand as it will be added to the application's environment variables
-- URI example:
+- [Create an Atlas Account.](https://docs.atlas.mongodb.com/tutorial/create-atlas-account/)
+- [Deploy a Free Tier Cluster.](https://docs.atlas.mongodb.com/tutorial/deploy-free-tier-cluster/)
+- [Add Your Connection IP Address to Your IP Access List.](https://docs.atlas.mongodb.com/security/add-ip-address-to-list/)
+- [Create a Database User for Your Cluster.](https://docs.atlas.mongodb.com/tutorial/create-mongodb-user-for-cluster/)
+- [Connect to Your Cluster.](https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/#connect-to-your-atlas-cluster) _(until step 4)_
 
+You must use the Connection String provided in step 4 from `Connect to Your Cluster` instruction.
+
+Connection string sample:
 ```
-mongodb://<dbuser><dbpassword>@ds257551.mlab.com:57551/mydb
+mongodb+srv://<dbuser>:<dbpassword>@jobcommunity.tts4a.mongodb.net/jobcommunity?retryWrites=true&w=majority
 ```
 
 ## Web
@@ -254,7 +262,7 @@ The environment variables need to be added to the App, you can use the following
 > Please, check the variables before adding them. For more information access the documentation.
 
 ```
-heroku config:set MONGO_URI="mongodb://<dbuser><dbpassword>@ds257551.mlab.com:57551/mydb"
+heroku config:set MONGO_URI="mongodb+srv://[add database user]:[add database password]@jobcommunity.tts4a.mongodb.net/jobcommunity?retryWrites=true&w=majority"
 heroku config:set JWT_SECRET="mysecrettoken"
 heroku config:set EMAIL_HOST="smtp.yourdomain.io"
 heroku config:set EMAIL_PORT="465"
