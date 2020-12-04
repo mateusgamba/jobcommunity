@@ -47,7 +47,7 @@ const Experience = ({ experience, deleteExperience }) => {
       <div className="card-body">
         {experience.length > 0 ? (
           <div className="table-responsive">
-            <table className="table table-striped table-border-top-none m-0">
+            <table className="table table-striped table-border-top-none table-vertical-align-middle m-0">
               <thead>
                 <tr>
                   <th width="30%">Company</th>
