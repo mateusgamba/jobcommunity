@@ -29,7 +29,7 @@ const Dashboard = ({
         <div className="card mb-4">
           <div className="card-body">
             <div className="row bg-white">
-              <div className="col-sm-12 col-md-2 p-1 text-center">
+              <div className="col-sm-12 col-md-2 text-center">
                 <img
                   src={user.avatar}
                   alt=""
@@ -73,19 +73,19 @@ const Dashboard = ({
                 <h3 className="m-0">{user.name}</h3>
 
                 {profile !== null && (
-                  <ul className="list-inline m-1">
-                    <li className="list-inline-item">
+                  <ul className="list-inline">
+                    <li className="list-inline-item mr-3">
                       <Link to={`/profile/${profile.handle}`}>
                         View profile
                       </Link>
                     </li>
-                    <li className="list-inline-item">
+                    <li className="list-inline-item mr-3">
                       <Link to="/edit-profile">Edit profile</Link>
                     </li>
-                    <li className="list-inline-item">
+                    <li className="list-inline-item mr-3">
                       <Link to="/change-password">Change password</Link>
                     </li>
-                    <li className="list-inline-item">
+                    <li className="list-inline-item mr-3">
                       <a href="#!" onClick={() => deleteAccount()}>
                         Delete my account
                       </a>

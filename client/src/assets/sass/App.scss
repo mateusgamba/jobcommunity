@@ -28,7 +28,7 @@ body {
   -webkit-box-align: center !important;
 }
 
-/* Navebar */
+/* Navbar */
 .navbar {
   margin-bottom: 0px;
   z-index: 1000;
@@ -112,7 +112,7 @@ body {
   .box-center-form {
     padding: 25px;
     background-color: $background-colour-white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   }
   @media (max-width: $break-small) {
     width: 100%;
@@ -220,7 +220,7 @@ select:not([multiple]) {
 .card {
   border-radius: 0;
   background-color: $background-colour-white;
-  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
   border: 0;
   .card-body {
     h3 {
@@ -260,11 +260,11 @@ select:not([multiple]) {
 h2.title {
   font-weight: 300;
   color: $colour-secondary;
-  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.04), 0px 1px 1px rgba(0, 0, 0, 0.04),
-    2px 1px 1px rgba(0, 0, 0, 0.04), 1px 2px 1px rgba(0, 0, 0, 0.04),
-    3px 2px 1px rgba(0, 0, 0, 0.04), 2px 3px 1px rgba(0, 0, 0, 0.04),
-    4px 3px 1px rgba(0, 0, 0, 0.04), 3px 4px 1px rgba(0, 0, 0, 0.04),
-    5px 4px 1px rgba(0, 0, 0, 0.04);
+  // text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.04), 0px 1px 1px rgba(0, 0, 0, 0.04),
+  //   2px 1px 1px rgba(0, 0, 0, 0.04), 1px 2px 1px rgba(0, 0, 0, 0.04),
+  //   3px 2px 1px rgba(0, 0, 0, 0.04), 2px 3px 1px rgba(0, 0, 0, 0.04),
+  //   4px 3px 1px rgba(0, 0, 0, 0.04), 3px 4px 1px rgba(0, 0, 0, 0.04),
+  //   5px 4px 1px rgba(0, 0, 0, 0.04);
   margin-left: 4px;
   @media (min-width: $break-small + 1) {
     font-size: 2rem;
@@ -317,6 +317,7 @@ table.table-border-top-none > thead > tr > th {
 
 table.table-vertical-align-middle > tbody > tr > td {
   vertical-align: middle;
+  padding: 1rem;
 }
 
 .btn-link-primary {
